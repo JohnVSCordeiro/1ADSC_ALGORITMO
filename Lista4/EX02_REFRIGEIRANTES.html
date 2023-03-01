@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercicio 02 - Quantos Refris</h1>
+    Quantos refris por dia: <input id="input_quantidade">
+    <button onclick="calcule()">Quantos Refris</button>
+    <div id="div_resultado"></div>
+    
+    
+</body>
+</html>
+
+<script>
+   
+    
+    function calcule() {
+    var quantidade = Number(input_quantidade.value)
+    var ano = quantidade * 365 
+    div_resultado.innerHTML = `Você consome ${ano} Refris por ano `
+
+    if (ano > 500) {
+        div_resultado.innerHTML += `<br>Cuidado com a diabetes!`
+
+
+    }
+
+
+    
+    
+
+    }
+</script>

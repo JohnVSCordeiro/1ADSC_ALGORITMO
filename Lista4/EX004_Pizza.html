@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Exercicio 04 - RolaPizza</h1>
+    Valor da Pizza: <input id="input_valor"> <br>
+    Quantos amigos: <input id="input_amigos"> <br>
+    <button onclick="calcule()">Rola Pizza</button>
+    <div id="div_resultado"></div>
+</body>
+
+</html>
+
+<script>
+    function calcule() {
+        var divisao = Number(input_valor.value) / Number(input_amigos.value)
+
+        div_resultado.innerHTML = `Cada amigo vai pagar ${divisao}`
+        if (divisao >= 20) {
+            div_resultado.innerHTML += `<br>Deu ruim! Pizza muito cara!`
+
+        }
+    }
+</script>
