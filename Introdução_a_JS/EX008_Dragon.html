@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução a JS- Ex07</title>
+</head>
+
+<body>
+    <h1>Exercício 08</h1>
+
+    Nome do Guerreiro: <input id="input_nome">
+    Ki: <input id="input_ki">
+    <button onclick="calculoki()">Ver ki em cada forma</button>
+
+
+
+</body>
+
+</html>
+
+<script>
+    function calculoki() {
+    var ki = Number(input_ki.value)
+    var ss = (ki * 50)
+    var ss2 = (ki * 100)
+    var nome = (input_nome.value)
+    
+    alert(
+        `O ${nome} começa com ${ki} de ki. Em super Sayajin o ${nome} tem ${ss} de Ki. Em Super Sayajin 2 o ${nome} tem ${ss2} de ki!!! `)
+    }
+</script>

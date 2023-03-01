@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+
+<body>
+    <h1></h1>
+</body>
+<h1>
+    Ex001 - As Fases do Sono
+</h1>
+
+Horas dormidas: <input id="input_hora">
+<button onclick="calcularSono()"> Calcular Sono</button>
+<div id="div_a"></div>
+<div id="div_b"></div>
+<div id="div_c"></div>
+<div id="div_d"></div>
+
+
+</html>
+
+
+<script>
+    function calcularSono() {
+        var hora = Number(input_hora.value)
+        div_a.innerHTML = `${hora * 5 / 100 } horas na fase 1`
+        div_b.innerHTML = `${hora * 45 / 100 } horas na <strong> fase 2 </strong>`
+        div_c.innerHTML = `${hora * 30 / 100 } horas na <strong> fase 3 </strong>`
+        div_d.innerHTML = `${hora * 20 / 100 } horas na fase <strong> REM</strong>`
+
+    }
+</script>

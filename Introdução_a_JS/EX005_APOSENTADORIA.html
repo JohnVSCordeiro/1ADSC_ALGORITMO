@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aposentadoria</title>
+</head>
+
+<body>
+
+    <h1>Exercicio05</h1>
+
+    Idade: <input id="input_idade">
+
+    <br>
+
+    <button onclick="calculeh()">Aposentadoria Homem</button>
+    <button onclick="calculeM()">Aposentadoria Mulher</button>
+
+
+
+</body>
+
+</html>
+
+<script>
+    function calculeh() {
+        var idade = Number(input_idade.value)
+        var aposentadoriaH = 70 - idade
+
+        alert('Um homem de ' + idade + ' levará mais ' + aposentadoriaH)
+
+    }
+
+    function calculeM() {
+        var idade = Number(input_idade.value)
+        var aposentadoriaM = 60 - idade
+
+        alert('Uma mulher de ' + idade + ' levará mais ' + aposentadoriaM)
+
+    }
+</script>

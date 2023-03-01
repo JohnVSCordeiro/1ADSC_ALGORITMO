@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1</title>
+</head>
+
+<body>
+
+    <h1 style="margin-left: 20px;">Aula do dia 13/02 - Algoritmos</h1>
+
+
+    Nome: <input id="input_nome">
+    Idade: <input type="number" id="input_idade">
+    <button style="background-color: red; border-color: white; border-radius: 20px; width: 150px; height: 50px; display: block; float: right; margin-right: 30px;"
+        onclick="cumprimentar(), condicao()"> Clica ai,poh!!!</button>
+
+        
+
+
+    
+
+</body>
+
+</html>
+
+<script>
+    function cumprimentar() {
+        alert(`Muito prazer em conhecer você, ` + input_nome.value + `. De ` + input_idade.value + ` anos!!!`)
+
+    }
+
+    function condicao() {
+        if (input_idade.value < 18) {
+            alert(`Você é menor de idade!!!`)
+        } else {
+            alert(`Você é maior de idade!!!`)
+        }
+
+    }
+
+</script>

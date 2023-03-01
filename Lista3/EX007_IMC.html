@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 07</title>
+</head>
+
+<body>
+    <h1>Exercicio 07 - IMC</h1>
+
+    Peso (Ex: 69.7 ): <input placeholder="kg" id="input_peso">
+    Altura (Ex: 1.75): <input placeholder="Metros" id="input_altura">
+
+    <button onclick="calculo()">Calcular IMC</button>
+
+    <div id="div_imc"></div>
+
+</body>
+
+</html>
+
+<script>
+    function calculo() {
+        var peso = Number(input_peso.value)
+        var altura = Number(input_altura.value)
+        var imc = peso / (altura * altura)
+
+        div_imc.innerHTML = `Seu IMC é ${imc}`
+    }
+</script>

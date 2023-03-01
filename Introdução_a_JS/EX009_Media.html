@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução a JS- Ex09</title>
+</head>
+
+<body>
+    <h1>Exercício09</h1>
+    Nome: <input id="input_nome">
+    <br>
+    Nota da Avaliação Continuada:<input id="input_continuada">
+    <br>
+    Nota da Semestral:<input id="input_semestral">
+    <br>
+    <button onclick="calculo()">Calcular a media</button>
+
+
+
+
+</body>
+
+</html>
+
+<script>
+    function calculo() {
+        var nome = input_nome.value
+        var notac = Number(input_continuada.value)
+        var notas = Number(input_semestral.value)
+        var media = (notac * 0.4) + (notas * 0.6)
+
+        alert("A média de " + nome + " será de " + media)
+
+
+
+    }
+</script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 06</title>
+</head>
+
+<body>
+    <h1>Exercicio 06 - Sayajins</h1>
+    Ki Base: <input id="input_ki"> <br>
+    Trasformar em... <br>
+    <button onclick="ssj()">SSJ</button>
+    <button onclick="ssj2()">SSJ2</button>
+    <button onclick="ssj3()">SSJ3</button>
+
+    <div id="div_s"></div>
+</body>
+
+</html>
+
+<script>
+    function ssj() {
+        var ki = Number(input_ki.value)
+        var mssj = ki * 50
+        var frase = `<br>Após se trasformar em Super Sayajin, o ki desse Sayajin passa a ser ${mssj} `
+
+        div_s.innerHTML += `${frase}`
+
+
+    }
+
+    function ssj2() {
+        var ki = Number(input_ki.value)
+        var mssj = ki * 100
+        var frase = `<br>Após se trasformar em Super Sayajin 2, o ki desse Sayajin passa a ser ${mssj} `
+
+        div_s.innerHTML += `${frase}`
+
+
+    }
+
+    function ssj3() {
+        var ki = Number(input_ki.value)
+        var mssj3 = ki * 200
+        var frase = `<br>Após se trasformar em Super Sayajin 3, o ki desse Sayajin passa a ser ${mssj3} `
+
+        div_s.innerHTML += `${frase}`
+
+
+    }
+</script>

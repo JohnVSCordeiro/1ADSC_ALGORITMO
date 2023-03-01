@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+
+<body>
+    <h1>Exercicio 3 - Tabuada</h1>
+    Num da Tabuada: <input id="input_tabuada">
+
+    <button onclick="calculo()">Ver Tabuada</button>
+    <div id="div_tabuada1"></div>
+    <div id="div_tabuada2"></div>
+    <div id="div_tabuada3"></div>
+    <div id="div_tabuada4"></div>
+    <div id="div_tabuada5"></div>
+    <div id="div_tabuada6"></div>
+    <div id="div_tabuada7"></div>
+    <div id="div_tabuada8"></div>
+    <div id="div_tabuada9"></div>
+
+
+</body>
+
+</html>
+
+<script>
+    function calculo() {
+        var num = Number(input_tabuada.value)
+
+        div_tabuada1.innerHTML = `${num} x 1 = ${num * 1}`
+        div_tabuada2.innerHTML = `${num} x 2 = ${num * 2}`
+        div_tabuada3.innerHTML = `${num} x 3 = ${num * 3}`
+        div_tabuada4.innerHTML = `${num} x 4 = ${num * 4}`
+        div_tabuada5.innerHTML = `${num} x 5 = ${num * 5}`
+        div_tabuada6.innerHTML = `${num} x 6 = ${num * 6}`
+        div_tabuada7.innerHTML = `${num} x 7 = ${num * 7}`
+        div_tabuada8.innerHTML = `${num} x 8 = ${num * 8}`
+        div_tabuada9.innerHTML = `${num} x 9 = ${num * 9}`
+
+    }
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução a JS- Ex06</title>
+</head>
+
+<body>
+
+    <h1>Exercício 06</h1>
+
+    Valor da Pizza: <input id="input_pizza">
+    Num. Pessoas: <input id="input_pessoas">
+    <button onclick="calculo()"> #lovePizza</button>
+
+
+
+</body>
+
+</html>
+
+<script>
+    function calculo() {
+        var valor = Number(input_pizza.value)
+        var pessoas = Number(input_pessoas.value)
+        var divisao = (valor / pessoas)
+
+        alert("Cada um dos " + pessoas + " amigos vai pagar: R$" + divisao)
+    }
+</script>

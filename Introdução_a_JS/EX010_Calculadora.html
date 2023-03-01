@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução JS- Ex10</title>
+</head>
+
+<body>
+
+    1ºNumero:<input id="input_n1">
+    2ºNumero:<input id="input_n2">
+
+    <button onclick="soma()">Soma</button>
+    <button onclick="sub()">Subtração</button>
+    <button onclick="mult()">Multiplicação</button>
+    <button onclick="divs()">Divisão</button>
+
+
+     <!--<div id="mem"></div>-->
+
+
+
+
+</body>
+
+</html>
+
+<script>
+    function soma() {
+        var n1 = Number(input_n1.value)
+        var n2 = Number(input_n2.value)
+        var soma = n1 + n2
+
+       alert("A soma entre " + n1 + " e " + n2 + " é " + soma )
+       
+        // mem.innerHTML = `A soma entre ${n1} e ${n2} é ${soma}`
+
+    }
+    function sub(){
+        var n1 = Number(input_n1.value)
+        var n2 = Number(input_n2.value)
+        var sub = n1 - n2 
+
+        alert("A diferença entre " + n1 + " e " + n2 + " é " + sub)
+
+        //mem.innerHTML = `A soma entre ${n1} e ${n2} é ${sub}`
+
+    }
+    
+    function mult(){
+        var n1 = Number(input_n1.value)
+        var n2 = Number(input_n2.value)
+        var mult = n1 * n2 
+
+        alert("A produto entre " + n1 + " e " + n2 + " é " + mult )
+       
+        // mem.innerHTML = `A multiplicação entre ${n1} e ${n2} é ${mult}`
+
+    }
+
+    function divs(){
+        var n1 = Number(input_n1.value)
+        var n2 = Number(input_n2.value)
+        var divs = n1 / n2 
+
+        alert("A razão " + n1 + " e " + n2 + " é " + divs)
+
+        //mem.innerHTML = `A divisão entre ${n1} e ${n2} é ${divs}`
+
+    }
+    
+    
+</script>

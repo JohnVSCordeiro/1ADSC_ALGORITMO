@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02 - Operações Aritméticas</title>
+</head>
+
+<body>
+
+    <h1 style="margin-left: 40px ;">Aula2</h1>
+
+    <h2
+        style="background-color: rgb(255, 0, 0); width: 210px; color: aliceblue; border-radius: 10px; margin-left: 200px;">
+        Minha calculadora
+    </h2>
+
+
+    Insira um Numero: <input id="input_numero">
+
+    <br>
+    <button onclick="mult()"> Multiplicar por 5</button>
+    <button onclick="divid()"> Dividir por 5</button>
+    <button onclick="sub()"> Subtrair por 5</button>
+    <button onclick="soma()"> Somar por 5</button>
+
+<br>
+
+    Priemeiro numero<input id="input_n1">
+    Segundo Numero <input id="input_n2">
+
+    <button onclick="calculadora()">Somar</button>
+
+
+
+    <div id="caculo"></div>
+
+
+
+</body>
+
+</html>
+
+<script>
+    
+    var numero = Number(input_numero.value)
+    
+    function mult() {
+
+        alert(input_numero.value + " multiplicado por 5 é: " + (input_numero.value * 5))
+
+    }
+
+    function divid() {
+
+        var numero = Number(input_numero.value)
+       
+        alert(input_numero.value + " Dividido por 5 é: " + (numero / 5))
+
+    }
+
+    function sub() {
+        var numero = Number(input_numero.value)
+
+        alert(numero + " Subitraido por 5 é: " + (numero - 5))
+    }
+
+    function soma() {
+        var numero = Number(input_numero.value)
+
+        alert(numero + " Somado por 5 é: " + (numero + 5))
+    }
+
+    function calculadora()
+    var n1 = Number(input_n1.value)
+    var n2 = Number(input_n2.value)
+    var s = n1 + n2
+
+    calculo.innerHTML = `a soma de ${n1} + ${n2} = a ${s}`
+
+
+
+
+
+
+</script>
+
+
