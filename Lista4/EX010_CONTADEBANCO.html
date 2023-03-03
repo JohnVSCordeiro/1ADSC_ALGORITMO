@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+<body>
+    Saldo da Conta: <input id="input_saldo">
+    <button onclick="calcule()">Verificar finanças</button>
+    <div id="div_financa"></div>
+    
+</body>
+</html>
+
+<script>
+    function calcule() {
+        var saldo = Number(input_saldo.value);
+
+        if (saldo == 0){
+            div_financa.innerHTML = `<h1 style = "color: black"> Conta zerada </h1>`
+        }
+
+        if (saldo < 0) {
+            div_financa.innerHTML = `<h1 style = "color: red"> Está devendo! </h1>`
+
+        }
+
+        if (saldo > 0 ) {
+            div_financa.innerHTML = `<h1 style = "color: blue"> Saldo positivo! &#128513  </h1>`
+
+        }
+    }
+</script>

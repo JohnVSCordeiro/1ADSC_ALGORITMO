@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+
+<body>
+    <h1>Exercício 10 - Streaming</h1>
+    Série: <input id="input_serie"> <br>
+    Quantos episódios já assistiu: <input id="input_ep"> <br>
+    <button onclick="calcule()">Verificar nível</button>
+    <div id="div_serie"></div>
+    <div id="div_tempo"></div>
+
+
+
+
+</body>
+
+</html>
+
+<script>
+    function calcule() {
+        var serie = input_serie.value;
+        var episodio = Number(input_ep.value);
+        var horas = (episodio * 22) / 60;
+        var frase = `Vejo que você gosta da série ${serie}`;
+
+        div_serie.innerHTML = `${frase}`;
+
+        if (horas < 30) {
+            div_tempo.innerHTML = ``
+
+        }
+
+        if (horas > 30) {
+            div_tempo.innerHTML = `Uau, você realmente gosta dessa série!`
+        }
+    }
+</script>
