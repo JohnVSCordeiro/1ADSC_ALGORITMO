@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite seu salário: <input id="inp_sal"><br>
+    Digite seu adicional mensal: <input id="inp_ad"><br>
+    Digite seu bônus: <input  id="inp_bon"><br> <br>
+
+    <button onclick="calc()">Analisar minha renda</button>
+    <br> <br>
+
+    <div id="div_frase"></div>
+    <div id="div_frase2"></div>
+</body>
+</html>
+
+<script>
+
+    function calc(){
+        var salario = Number(inp_sal.value);
+        var adicional = Number(inp_ad.value);
+        var bonus = Number(inp_bon.value);
+        var bruto = salario + adicional + bonus;
+        var ir = 0;
+
+        if (bruto >= 10000){
+            var ir = bruto - (bruto * 0.875);
+            var liquido = bruto - ir;
+        }
+        
+        if (bruto < 10000){
+            var liquido = bruto;
+        }
+
+        var inss = liquido - (liquido * 0.9);
+        var fgts = liquido - (liquido * 0.92);
+
+        var liquidot = liquido - inss - fgts 
+
+        div_frase.innerHTML = `<b>Análise da sua renda</b> <br><br> Com o salário de <b>R$${salario}</b>, com adicional de <b>R$${adicional}</b>
+            e bônus de <b>R$${bonus}</b>, você tem: <br> <br> 
+            Bruto: <b>R$${bruto}</b> <br>
+            IR: <b>R$${ir}</b> <br>
+            INSS: <b>R$${inss}</b> <br>
+            FGTS: <b>R$${fgts}</b> <br>
+            Líquido: <b>R$${liquidot}</b> <br> <br>
+            `
+        if (liquidot > 2500){
+            var liquidom = liquidot - (liquidot * 0.85);
+            var liquidoa = liquidom * 12;
+            div_frase.innerHTML += `Com a renda de <b>R$${liquidot}</b>, é recomendado poupar <b>R$${liquidom}</b>, 
+            para que em um ano tenha poupado <b>R$${liquidoa}.</b>`
+        }
+
+    }
+
+</script>

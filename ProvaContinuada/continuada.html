@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuada de Algoritmo</title>
+</head>
+
+<body>
+    Salário: <input type="text" id="input_salario"> <br>
+    Adicinal: <input type="text" id="input_adicional"><br>
+    Bônus: <input type="text" id="input_bonus"> <br>
+    <button onclick="calcular()"> Analisar Minha Renda </button>
+    <div id="div_resposta"></div>
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var salario = Number(input_salario.value);
+        var adicional = Number(input_adicional.value);
+        var bonus = Number(input_bonus.value);
+        var bruto = salario + adicional + bonus;
+        var ir = bruto / 100 * 12.5;
+        var inss = (bruto - ir) / 100 * 10;
+        var fgts = (bruto - ir) / 100 * 8;
+        var liquido = bruto - (ir + inss + fgts);
+        var insss = bruto / 100 * 10;
+        var fgtss = bruto / 100 * 8;
+        var liquidos = bruto - (insss + fgtss);
+
+
+
+        if (bruto >= 10000) {
+
+
+            div_resposta.innerHTML = ` <h2><b>Análise da sua renda:</b></h2>
+
+            Com o salário de <b>R$${salario}</b>, adicional de <b>R$${adicional}</b> e bônus de <b>R$${bonus}</b>, você tem: <br>
+
+            <br> Bruto: <b>R$${bruto}</b> <br>
+            IR: <b>R$${ir}</b> <br>
+            INSS: <b>R$${inss}</b> <br>
+            FGTS: <b>R$${fgts}</b> <br>
+            Líquido: <b>R$${liquido}</b> <br>
+            `
+            if (liquido >= 2500) {
+                div_resposta.innerHTML +=
+                    ` <br> Com a renda de <b>R$${liquido}</b> é recomendado guardar <b>R$${liquido / 100 * 15}</b>, para que em um ano tenha poupado <b>R$${(liquido / 100 * 15) * 12}</b>.`
+            }
+
+
+
+        }
+
+        if (bruto < 10000) {
+
+
+            div_resposta.innerHTML = ` <h2><b>Análise da sua renda:</b></h2>
+
+           Com o salário de <b>R$${salario}</b>, adicional de <b>R$${adicional}</b> e bônus de <b>R$${bonus}</b>, você tem: <br>
+
+           <br> Bruto: <b>R$${bruto}</b> <br>
+           IR: <b>R$0</b> <br>
+           INSS: <b>R$${insss}</b> <br>
+           FGTS: <b>R$${fgtss}</b> <br>
+           Líquido: <b>R$${liquidos}</b> <br>`
+
+           if (liquidos > 2500){
+            div_resposta.innerHTML += ` <br> Com a renda de <b>R$${liquidos}</b> é recomendado guardar <b>R$${liquidos / 100 * 15}</b>, para que em um ano tenha poupado <b>R$${(liquidos / 100 * 15) * 12 }.`
+           }
+        }
+        
+        
+        if (bruto <= 2500) {
+
+
+            div_resposta.innerHTML = ` <h2><b>Análise da sua renda:</b></h2>
+
+           Com o salário de <b>R$${salario}</b>, adicional de <b>R$${adicional}</b> e bônus de <b>R$${bonus}</b>, você tem: <br>
+
+           <br> Bruto: <b>R$${bruto}</b> <br>
+           IR: <b>R$0</b> <br>
+           INSS: <b>R$${insss}</b> <br>
+           FGTS: <b>R$${fgtss}</b> <br>
+           Líquido: <b>R$${liquidos}</b> <br>`
+
+        }
+    }
+</script>
